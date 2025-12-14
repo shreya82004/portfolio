@@ -7,9 +7,60 @@ st.set_page_config(
     layout="wide"
 )
 
-# ---------------- HEADER ----------------
-st.title("Shreya Amar Kasture")
-st.subheader("Final Year CSE (Honors in Data Science) Student")
+# ---------------- GLOBAL COLOR THEME ----------------
+st.markdown("""
+<style>
+.stApp {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+a {
+    color: #4cc9f0 !important;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 1px solid #444;
+}
+
+strong {
+    color: #ffd166;
+}
+
+.footer {
+    color: #cccccc;
+    text-align: center;
+    font-size: 14px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# ---------------- PROFILE SECTION ----------------
+col1, col2 = st.columns([1, 3])
+
+with col1:
+    st.image("profile.png", width=180)
+
+with col2:
+    st.markdown(
+        """
+        <p style="font-size:26px; font-weight:600; margin-bottom:5px;">
+            Hi There 👋,
+        </p>
+        <p style="font-size:38px; font-weight:800; margin-top:0;">
+            I'm <span style="color:#ff7a00;">Shreya Amar Kasture</span>
+        </p>
+        <p style="font-size:22px; color:#ffd166;">
+            Final Year CSE (Honors in Data Science) Student
+        </p>
+        """,
+        unsafe_allow_html=True
+    )
 
 st.markdown("---")
 
@@ -90,4 +141,7 @@ st.markdown("""
 
 # ---------------- FOOTER ----------------
 st.markdown("---")
-st.markdown("© 2025 Shreya Amar Kasture | Built with Python & Streamlit")
+st.markdown(
+    "<div class='footer'>© 2025 Shreya Amar Kasture | Built with Python & Streamlit</div>",
+    unsafe_allow_html=True
+)
